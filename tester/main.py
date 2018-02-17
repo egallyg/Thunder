@@ -207,6 +207,7 @@ def LoadEvents(F):
 def Go():
     Channel1 = Channel(16, 20, 21)
     Channel2 = Channel(26, 19, 13)
+    #TODO add other 3 channels and pins
     ChannelList.append(Channel1)
     ChannelList.append(Channel2)
     LoadEvents("/home/pi/Desktop/hi")
@@ -217,42 +218,3 @@ def Go():
         i.join()
 
 Go()
-# Ch1Color = Color(50,50,0)
-# Ch2Color = Color(0,50,50)
-# Ch12Color = Color(50,0,50)
-# Ch22Color = Color(0,50,0)
-
-# Strobe1 = Strobe(Ch1Color,5,2)
-# Strobe2 = Strobe(Ch1Color,5,3)
-#
-# Fade1 = Fade(Ch1Color,Ch2Color,5)
-# Fade2 = Fade(Ch2Color,Ch1Color,5)
-#
-# Flash1 = Flash(Ch12Color,2)
-# Flash2 = Flash(Ch22Color,3)
-#
-# myBlank = Blank(3)
-# Blank2 = Blank(3)
-#
-# Channel1.EventList.append(Fade1)
-# Channel1.EventList.append(myBlank)
-# Channel1.EventList.append(Flash1)
-# Channel1.EventList.append(myBlank)
-#
-# Channel2.EventList.append(Fade2)
-# Channel2.EventList.append(Blank2)
-# Channel2.EventList.append(Flash2)
-# Channel2.EventList.append(Blank2)
-#
-# myBlack = Color(0,100,0)
-#
-# Channel1.start()
-# Channel2.start()
-# Channel1.join()
-# Channel2.join()
-# pi.set_PWM_dutycycle(Channel1.RedPin, 0)
-# pi.set_PWM_dutycycle(Channel1.GreenPin, 0)
-# pi.set_PWM_dutycycle(Channel1.BluePin, 0)
-# pi.set_PWM_dutycycle(Channel2.RedPin, 0)
-# pi.set_PWM_dutycycle(Channel2.GreenPin, 0)
-# pi.set_PWM_dutycycle(Channel2.BluePin, 0)
